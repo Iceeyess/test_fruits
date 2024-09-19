@@ -4,6 +4,7 @@ from fruits.models import Fruit
 
 
 class FruitSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField()
     class Meta:
         model = Fruit
-        fields = ('name', )
+        fields = ('id', 'name', 'owner', )
